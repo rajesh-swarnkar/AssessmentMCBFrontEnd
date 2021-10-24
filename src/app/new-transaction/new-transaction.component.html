@@ -1,0 +1,126 @@
+<form class="form" [formGroup]="TransactionForm" (ngSubmit)="onSubmit()">
+
+
+    <!-- //multiple table for "Multi Value Form"-->
+    <table class="full-width" cellspacing="0" formArrayName="forms" *ngFor="let form of forms().controls; let i=index"
+        [formGroupName]="i" style="border-top: 10px;">
+
+        <tr style="padding-bottom: 24px;">
+            <td style="margin-bottom:16px">
+                <mat-radio-group  aria-label="Select an option" style="margin-right:16px">
+                    <mat-radio-button value="1">New</mat-radio-button>
+                    <mat-radio-button value="2">Existing</mat-radio-button>
+                </mat-radio-group>
+
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Reference</mat-label>
+                    <input matInput required>
+                </mat-form-field>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer number</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer name</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Customer Phone number</mat-label>
+                    <input type="tel" matInput placeholder="Phone number" pattern="[0-9]{10}" (blur)="validatePhone($event)" (focus)="isPhoneError=false">
+                </mat-form-field>
+                <p *ngIf="isPhoneError" class="warning">{{error}}</p>
+            </td>
+            
+
+
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class=" full-width" appearance="fill">
+                    <mat-label>Customer address</mat-label>
+                    <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+                </mat-form-field>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Beneficiary Bank</mat-label>
+                    <input matInput placeholder="ICICI" value="">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Beneficiary Account Number</mat-label>
+                    <input matInput placeholder="Ex. 94105" value="">
+                </mat-form-field>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+                <mat-label>Payment details</mat-label>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Credit/Debit Card Details</mat-label>
+                    <input matInput placeholder="7868 8787 7878 7878" value="">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>Valid Through</mat-label>
+                    <input matInput #postalCode maxlength="5" placeholder="09/23" value="">
+                </mat-form-field>
+            </td>
+            <td>
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>cvv</mat-label>
+                    <input matInput #postalCode maxlength="5" placeholder="Ex. 890" value="">
+                </mat-form-field>
+            </td>
+
+        </tr>
+        <tr style="border-style: outset;border-color: tomato;">
+            <td>
+                <mat-form-field appearance="fill">
+                    <mat-label>Region:</mat-label>
+                    <mat-select>
+                        <mat-option value="one">Port Louis</mat-option>
+                        <mat-option value="two">Curepipe, Vacoas</mat-option>
+                        <mat-option value="two">Port Mathurin</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </td>
+
+            <td>
+                <button mat-raised-button color="warn" style="margin:40px;" (click)="removeForm(i)">Remove Form</button>
+            </td>
+        </tr>
+
+    </table>
+    <div>
+        <button mat-raised-button color="primary" style="margin-right:16px">Create Transaction</button>
+        <button mat-stroked-button color="accent" style="margin-right:16px" (click)="addMoreForm()">Add More
+            Form</button>
+    </div>
+</form>
