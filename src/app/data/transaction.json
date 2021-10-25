@@ -1,0 +1,22 @@
+[
+  {"position": 1,  "Customername": "Ram", "Transferamount": 1.0079, "TransferCurrency": "INR","Reference": "CUSram"},
+  {"position": 2,  "Customername": "Raj", "Transferamount": 4.0026, "TransferCurrency": "USD","Reference": "CUSram"},
+  {"position": 3,  "Customername": "Lium", "Transferamount": 6.941, "TransferCurrency": "EUR","Reference": "CUSram"},
+  {"position": 4,  "Customername": "Beryllium", "Transferamount": 9.0122, "TransferCurrency": "INR","Reference": "CUSram"},
+  {"position": 5,  "Customername": "Boron", "Transferamount": 10.811, "TransferCurrency": "INR","Reference": "CUSram"},
+  {"position": 6,  "Customername": "dim", "Transferamount": 12.0107, "TransferCurrency": "INR","Reference": "CUSram"},
+  {"position": 7,  "Customername": "Nitron", "Transferamount": 14.0067, "TransferCurrency": "USD","Reference": "CUSram"},
+  {"position": 8,  "Customername": "Oxyn", "Transferamount": 15.9994, "TransferCurrency": "CHF","Reference": "CUSram"},
+  {"position": 9,  "Customername": "Flune", "Transferamount": 18.9984, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 10,  "Customername": "Neon", "Transferamount": 20.1797, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 11,  "Customername": "Sodm", "Transferamount": 22.9897, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 12,  "Customername": "Mag", "Transferamount": 24.305, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 13,  "Customername": "Alum", "Transferamount": 26.9815, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 14,  "Customername": "Sili", "Transferamount": 28.0855, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 15,  "Customername": "Phosprus", "Transferamount": 30.9738, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 16,  "Customername": "Sulf", "Transferamount": 32.065, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 17,  "Customername": "Chlo", "Transferamount": 35.453, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 18,  "Customername": "Arg", "Transferamount": 39.948, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 19,  "Customername": "Pota", "Transferamount": 39.0983, "TransferCurrency": "MUR","Reference": "CUSram"},
+  {"position": 20,  "Customername": "Calc", "Transferamount": 40.078, "TransferCurrency": "MUR","Reference": "CUSram"}
+]

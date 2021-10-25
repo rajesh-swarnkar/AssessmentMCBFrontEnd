@@ -3,6 +3,8 @@ import {FormControl, Validators, FormGroup,FormBuilder,FormArray} from '@angular
 import { IMessage } from '../auth/login/auth.model';
 import { saveAs } from 'file-saver';
 import { validateHorizontalPosition } from '@angular/cdk/overlay';
+import transactionData from '../data/transaction.json';
+import {PeriodicElement} from '../view-submitted-transactions/view-submitted-transactions.component';
 
 @Component({
   selector: 'app-new-transaction',
@@ -60,7 +62,14 @@ export class NewTransactionComponent implements OnInit {
   }  
      
   onSubmit() {  
-    console.log(this.TransactionForm.value);  
+    console.log(this.TransactionForm.value);
+    // let customObj:PeriodicElement; 
+    // this.TransactionForm.value.forEach(element => {
+    //   console.log(element)
+    //   // transactionData.push(customObj);
+    // });
+    // // data:PeriodicElement[]=transactionData;
+
     const blob = new Blob([JSON.stringify(this.TransactionForm.value)], {type : 'application/json'});
     saveAs(blob,'transaction.json');
   }  
@@ -76,8 +85,6 @@ export class NewTransactionComponent implements OnInit {
       }
 
       console.log(this.error,this.isPhoneError);
-      
-
   }
 
 }

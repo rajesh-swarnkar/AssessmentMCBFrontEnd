@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="TransactionForm" (ngSubmit)="onSubmit()">
+<form class="form" [formGroup]="TransactionForm" >
 
 
     <!-- //multiple table for "Multi Value Form"-->
@@ -119,7 +119,7 @@
 
     </table>
     <div>
-        <button mat-raised-button color="primary" style="margin-right:16px">Create Transaction</button>
+        <button mat-raised-button color="primary" style="margin-right:16px" (click)="onSubmit()">Create Transaction</button>
         <button mat-stroked-button color="accent" style="margin-right:16px" (click)="addMoreForm()">Add More
             Form</button>
     </div>
